@@ -1,0 +1,58 @@
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color:#000;
+}
+.clear{
+	clear: both;
+}
+#container{
+	width: 780px;
+	padding: 0 0 20px 0;
+}
+
+	#topo{
+		
+	}
+		#topoLogo{
+			background:url('http://www.r7.com/r7/media/2014/_assets/spriteTestDrive.png') no-repeat 0 0px;
+			width: 71px;
+			height: 60px;
+			float: left;
+		}
+		#tituloLinhaFina{
+			margin: 0 0 0 10px;
+			float: left;
+		}
+		#tituloLinhaFina h1{
+			font-size: 22px;
+			font-family: Arial;
+			font-weight: bold;
+			margin-top: 6px;
+		}
+		#tituloLinhaFina h2{
+			font-size: 16px;
+			font-family: Arial;
+			font-weight: normal;
+		}
+	
+	#conteudoInfo{
+		width: 780px;
+		border: 1px solid #ccc;
+		margin: 10px 0;
+	}
+
+	#rodape{
+		font-size: 15px;
+		padding: 10px 0;
+		font-weight: 400;
+		height: auto;
+	}
+		#fonte{
+			float: left;
+		}
+		#arte{
+			float: right;
+		}

@@ -1,0 +1,88 @@
+#conteudoInfo{
+	position: relative;
+	background:url('http://www.r7.com/r7/media/2014/_assets/mapadoEmprego/mapaDoEmprego.jpg');
+	width: 780px;
+	height: 549px;
+	font-family: 'Open Sans', sans-serif;
+}
+	.objeto{
+		position: absolute;
+	}
+
+	#zonaSul{
+		left:331px;
+		top:178px;
+	}
+	#zonaLeste{
+		left:434px;
+		top:129px;
+	}
+	#zonaCentral{
+		left:392px;
+		top:153px;
+	}
+	#zonaNorte{
+		left:404px;
+		top:65px;
+	}
+	#zonaOeste{
+		left:320px;
+		top:84px;
+	}
+	#ficha{
+		width: 251px;
+		font-size: 13px;
+		bottom: 10px;
+		left:10px;
+	}
+		#ficha h1{
+			font-size: 13px;
+			font-weight: bold;
+		}
+		
+		#ficha div{
+			background-color: #fff;
+			border: 1px solid #8c9f99;
+			padding: 10px;
+		}
+			#fichaTotalVagas{
+				text-align: left;
+				margin-top: 10px;
+			}
+			#fichaTotalVagas span{
+				margin-bottom: 5px;
+				display: block;
+			}
+			#estadoSP{
+				text-align: center;
+			}
+			#estadoSP h1{
+				margin-bottom: 10px;
+			}
+
+	
+
+#ConteinerSeta
+{
+	position:absolute;
+	z-index:4;
+	display:none;
+
+}
+#SetaBaixo {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #fff;
+}
+
+#tooltip{
+	z-index:3;
+	display:none;
+	background-color:#FFFFFF;
+	position:absolute;
+	padding:5px;
+	font-size:12px;
+	border:1px solid #ccc;
+}

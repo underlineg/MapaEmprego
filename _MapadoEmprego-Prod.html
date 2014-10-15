@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<script>
+			var titulo = "Trabalhadores encontram 7.785 vagas nesta semana";
+			var linhafina = "Zona sul concentra maior parte das oportunidades";
+			//Noticias, Entretenimento, Esportes, Record, Videos
+			var Sessao = "Noticias";
+			var Largura = 700;
+			var imagem = ""
+			var design = "";
+			var fonte = "Fonte: CAT e EmpregaSP";
+            var espessuraBorda = 1;
+            var corBorda = "#ccc";
+            var estatico = false;
+			/*
+				true = habilita o topo / rodape / o over do zebrado
+				false = desabilita o topo / rodape / o over do zebrado
+			*/
+			var temTopo = true;
+			var temRodape = true;
+            var arrItens = [
+             {_id:"hoverZonaCentral", _target:"zonaCentral" , _regiao:"Zona Central", _vagas:"<b>CAT</b>: 1.824", _pdf:"pdf/ZonaNorte.pdf"},
+                    {_id:"hoverZonaOeste", _target:"zonaOeste" , _regiao:"Zona Oeste",   _vagas:"<b>CAT</b>: 1.772", _pdf:"pdf/ZonaNorte.pdf"},
+                   
+                    {_id:"hoverZonaNorte", _target:"zonaNorte" ,   _regiao:"Zona Norte",   _vagas:"<b>CAT</b>: 836",   _pdf:"pdf/ZonaNorte.pdf"}, 
+                    {_id:"hoverZonaLeste", _target:"zonaLeste" ,   _regiao:"Zona Leste",   _vagas:"<b>CAT</b>: 1.102", _pdf:"pdf/ZonaNorte.pdf"},
+                    {_id:"hoverZonaSul",  _target:"zonaSul" ,    _regiao:"Zona Sul",     _vagas:"<b>CAT</b>: 1.866", _pdf:"pdf/ZonaNorte.pdf"},
+
+                    {_id:"estadoSP",    _regiao:"Estado de SP", _vagas:"<b>Estado de SP</b>:<br />450", _pdf:"http://www.empregasaopaulo.sp.gov.br/"}
+                ];
+          var VagasABC = "385";
+          var vagasDeficientes = "0";
+          var totalVagas = "2.489";
+        </script>
+
+        <link rel="stylesheet" href="http://www.r7.com/r7/media/2014/_assets/infoestatico2014.css" />
+        <link rel="stylesheet" href="mapaEmprego.v02.css" />
+    </head>
+    <body>
+        <div id="container">
+        	<div id="topo">
+            	<div id="topoLogo"></div>
+                <div id="tituloLinhaFina">
+                	<h1 id="h1Titulo"></h1>
+					<h2 id="h2Titulo"></h2>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="conteudoInfo">
+                <div id="zonaSul" class="objeto">
+                  <img src="zonaSul.png" alt="" usemap="#mapaZonaSul">
+                    
+                    </map>
+                </div>
+                <div id="zonaLeste" class="objeto">
+                    <img src="http://www.r7.com/r7/media/2014/_assets/mapadoEmprego/zonaLeste.png" alt="" usemap="#imgmap201481491312">
+                </div>
+                <div id="zonaCentral" class="objeto">
+                    <img src="http://www.r7.com/r7/media/2014/_assets/mapadoEmprego/zonaCentral.png" alt="" usemap="#imgmap201481491134">
+                </div>
+                <div id="zonaNorte" class="objeto">
+                    <img src="http://www.r7.com/r7/media/2014/_assets/mapadoEmprego/zonaNorte.png" alt="" usemap="#imgmap20148149167">
+                </div>
+                <div id="zonaOeste" class="objeto">
+                    <img src="http://www.r7.com/r7/media/2014/_assets/mapadoEmprego/zonaOeste.png" alt="" usemap="#imgmap201481491916">
+                </div>
+                <div id="ficha" class="objeto">
+                    <div id="estadoSP">
+                        <h1>Vagas no Estado de SP:</h1>
+                        <img src="http://www.r7.com/r7/media/2014/_assets/mapadoEmprego/estadoSP.png" alt="">
+                    </div>
+                    <div id="fichaTotalVagas">
+                        <h1>Vagas para pessoas com deficiência:</h1>
+                        <span id="vagasDeficiente"></span>
+
+                        <h1>Vagas para a Grande SP e ABC:</h1>
+                        <span id="vagasABC"></span>
+
+                        <h1>Total de vagas:</h1>
+                        <span id="totalVagas"></span>
+                    </div>
+                
+                    
+                </div>
+
+                <div id="tooltip"></div>
+                <div id="ConteinerSeta">
+                    <div id="SetaBaixo"></div>
+                </div>
+            </div>
+            <div id="rodape">
+            	<div id="fonte" align="left"></div>
+                <div id="arte" align="right"></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <map id="mapaZonaSul" name="mapaZonaSul">
+            <area shape="poly" id="hoverZonaSul" title="" coords="100,3,107,7,122,26,121,51,110,61,92,73,94,85,104,95,86,107,92,125,100,138,96,172,100,180,107,185,112,239,98,250,97,261,76,255,56,258,21,269,24,239,-2,221,2,195,21,204,17,168,31,171,19,156,6,153,14,130,24,121,6,110,7,73,11,54,24,40,36,31,27,28,27,22,37,20,50,19,56,14,64,19,77,13,68,2" class="tooltip" href="#" />
+        </map>
+        <map id="imgmap201481491312" name="imgmap201481491312">
+            <area shape="poly" id="hoverZonaLeste" title="" coords="4,34,2,39,5,44,5,47,-1,48,7,60,16,78,32,82,36,81,48,87,57,88,61,92,69,90,75,92,78,97,89,99,96,99,100,95,102,98,108,99,114,91,117,81,123,76,127,56,117,47,121,45,119,35,125,28,132,24,132,20,130,13,124,3,121,8,117,9,115,11,110,10,108,0,103,2,98,4,90,11,85,10,83,12,82,9,72,5,56,5,57,1,48,6,44,13,36,17,37,23,30,22,31,31,13,37,10,34,7,33" class="tooltip" href="#" />
+        </map>
+        <map id="imgmap201481491134" name="imgmap201481491134">
+            <area shape="poly" id="hoverZonaCentral" title="" coords="33,41,38,39,37,32,36,28,43,26,46,20,44,12,47,10,43,5,18,6,2,2,4,7,10,15,17,16,15,22,9,25,10,27,14,27" class="tooltip" href="#"/>
+        </map>
+        <map id="imgmap20148149167" name="imgmap20148149167">
+            <area shape="poly" id="hoverZonaNorte" title="" coords="0,92,17,94,32,95,42,98,53,98,65,93,60,86,59,74,61,64,56,60,57,32,61,31,61,24,69,15,66,-2,60,5,50,10,37,19,29,38,27,34,25,39,10,43,9,56,14,61,10,72,3,74,2,79,4,85" class="tooltip" href="#" />
+        </map>
+        <map id="imgmap201481491916" name="imgmap201481491916">
+            <area shape="poly" id="hoverZonaOeste" title="" coords="27,48,34,58,35,69,38,83,36,102,12,117,35,124,50,112,62,115,67,109,79,114,83,111,79,92,91,87,77,85,72,69,83,73,88,65,88,59,92,46,91,33,90,22,77,14,73,23,47,3,34,0,27,7,18,9,12,6,-1,10,0,24,7,30,10,45,14,49,19,44" href="#"  class="tooltip" /></map>
+
+
+        <script src="http://www.r7.com/r7/media/2014/_assets/jquery-1.9.1.min.js"></script>
+        <script src="http://www.r7.com/r7/media/2014/_assets/jquery.queryloader2.min.js"></script>
+        <script src="http://www.r7.com/r7/media/2014/_assets/gs/TweenLite.min.js"></script>
+        <script src="http://www.r7.com/r7/media/2014/_assets/gs/plugins/CSSPlugin.min.js"></script>
+        <script src="http://www.r7.com/r7/media/2014/_assets/infoestatico2014.js"></script>
+        <script src="http://www.r7.com/r7/media/2014/_assets/mapadoEmprego/mapaEmpregoSP.v02.js"></script>
+        <!--<script src="mapaEmpregoSP.v02.js"></script>-->
+    </body>
+</html>
+
